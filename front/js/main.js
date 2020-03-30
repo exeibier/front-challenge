@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var altura = $('.menu').offset().top;
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
 
         if ($(window).scrollTop() > altura) {
             $('.menu').addClass('menu-fixed')
@@ -10,3 +10,14 @@ $(document).ready(function() {
         }
     })
 })
+
+function fetchPosts() {
+    $.ajax({
+        url: "https://javascript-ajax-d0ce6.firebaseio.com/team-xmm/posts/.json",
+        method: "GET",
+        success: (response) => {
+            console.log('RES from GET', response)
+
+        }
+    })
+}
