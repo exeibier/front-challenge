@@ -60,6 +60,59 @@ img {
     display: flex;
     justify-content: space-between;
 }
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 50%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ffff url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+    width: 55px;
+    margin-right: 10px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+#demo-2 input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #fff;
+}
+#demo-2 input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}
 
 .post {
     padding-bottom: 20px;
@@ -157,3 +210,104 @@ p {
 .pad-mar-2 {
     padding-left: 15px;
 }
+
+/**BLOG**/
+
+.imagen {
+    text-align: center;
+}
+.imagen img {
+    width: 60%;
+}
+.titulo {
+    text-align: center;
+    padding-top: 40px;
+}
+.titulo h2 {
+    font-size: 40px;
+}
+.subtitulo {
+    text-align: center;
+    padding-top: 20px;
+}
+.subtitulo h3 {
+    color:rgba(0, 0, 0, 0.54);
+    font-size: 24px;
+}
+
+.author {
+    border-bottom: solid 1px grey ;
+    padding: 20px;
+}
+
+.img-aut {
+    width: 30px;
+
+}
+.img-aut img {
+    border-radius: 50%;
+}
+
+.author .social {
+    text-align: right;
+    font-size: 30px;
+}
+
+.author .social a {
+    color: #000000;
+    margin-left: 10px   ;
+}
+
+.blog {
+    padding-top: 20px;
+}
+
+.bottom-aut {
+    text-align: center;  
+    border-top: solid 1px grey  ;  
+    border-bottom: solid 1px grey ;
+    padding: 20px;
+    color:rgba(0, 0, 0, 0.54);
+}
+
+
+.bottom-aut img {
+    width: 5%;
+    border-radius:50%;
+}
+
+footer {
+    height: 300px;
+    color:white;
+    margin-top: 20px;
+}
+
+footer .columns {
+    padding-top: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.54);
+}
+footer .columns p{
+   color: rgba(255, 255, 255, 0.7);
+}
+
+footer .columns a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer .logo-white {
+    padding:30px
+}
+footer .logo-white img {
+    width: 70%;
+}
+
+footer .links {
+    padding-top: 30px;
+}
+
+footer .links a {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 10px;
+}
+
+
