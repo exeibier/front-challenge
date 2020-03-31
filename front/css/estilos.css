@@ -310,4 +310,8 @@ footer .links a {
     margin-left: 10px;
 }
 
-
+.extract{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
