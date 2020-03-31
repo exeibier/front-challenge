@@ -8,11 +8,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
 </head>
@@ -32,45 +30,31 @@
                 </div>
 
                 <form id="demo-2">
-                    <input id="search" type="search" placeholder="Search in Medium">
+                    <input type="search" placeholder="Search in Medium">
                 </form>
 
-                <button type="button" class="btn btn-outline-secondary p-2 bd-highlight" data-toggle="modal"
-                    data-target="#exampleModal">
+                <button type="button" class="btn btn-outline-secondary p-2 bd-highlight" data-toggle="modal" data-target="#exampleModal">
                     New Post
-                </button>
+                  </button>
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Nuevo Post</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                             </div>
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Select image</label>
-                                        <input type="text" class="form-control" id="select-image"
-                                            aria-describedby="image" placeholder="Paste url">
+                                        <input type="text" class="form-control" id="select-image" aria-describedby="image" placeholder="Paste url">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Title</label>
-                                        <input type="text" class="form-control" id="title" aria-describedby="Title"
-                                            placeholder="Title">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Topic</label>
-                                        <input type="text" class="form-control" id="topic" aria-describedby="Title"
-                                            placeholder="topic">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">author</label>
-                                        <input type="text" class="form-control" id="author" aria-describedby="author"
-                                            placeholder="author">
+                                        <input type="text" class="form-control" id="title" aria-describedby="Title" placeholder="Title">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Date</label>
@@ -78,7 +62,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Text</label>
-                                        <textarea class="form-control rounded-0" id="text-area" rows="10"></textarea>
+                                        <textarea class="form-control rounded-0" id="text-area" rows="20"></textarea>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="popular-box">
@@ -88,7 +72,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary btn-post">Post</button>
+                                <button type="button" class="btn btn-primary">Post</button>
                             </div>
                         </div>
                     </div>
@@ -96,16 +80,18 @@
 
             </div>
 
-
+            <!-----                     menu                         ----->
 
             <div class="navbar navbar-expand-lg navbar-light bg-light">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>
                 <div class="collapse navbar-collapse menu" id="navbarNav">
                     <ul class="nav justify-content-center " id="pasted-menu">
+                        <li class="disabled fle-L"> <a class="push-L text-decoration-none" href="#">&laquo;<span
+             class="sr-only">Anterior</span></a>
+                        </li>
 
                         <li class="nav-item active">
                             <a class="nav-link" a href="#">HOME <span class="sr-only">(current)</span></a>
@@ -154,12 +140,14 @@
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">MORE</a>
                         </li>
-
+                        <li class="disabled fle-R"> <a class="push-R text-decoration-none" href="#">&raquo;<span
+             class="sr-only">Anterior</span></a>
+                        </li>
                     </ul>
                 </div>
 
             </div>
-
+            <!-----                     menu                         ----->
         </header>
     </div>
 
@@ -177,76 +165,67 @@
     <!--------------------------------------------- CONTAINER -------------------------------------------------------->
 
 
-    <div class="container" id="filtered-post-wrapper">
+    <div class="container">
         <div class="container" id="top">
 
             <div class="row row-cols-3 justify-content-end">
 
 
                 <div class="col bg-white col-12 col-md-4 col-6 col-md-4">
+                    <button type="button" class="btn " data-toggle="modal" data-target="#content">
+                        <img src="img/0 TaMXyElJbe2rfzn8.png" style="width: 100%;" class="card-img-top" alt="...">
 
-                    <img src="img/0 TaMXyElJbe2rfzn8.png" style="width: 100%;" class="card-img-top" alt="...">
-
-                    <a href="#" class="text-decoration-none">
-                        <h2 class="font-weight-bolder">What do various counreies´healthcare capacities look like ?</h2>
-                        <p>A daily covi-19 update from andy Slavitt, former head og the centers for medicare and
-                            medicaid sercices</p>
-                    </a>
-
-                    <a href="#" class="text-decoration-none">
-                        <p>Healthcare data and metrics visualised and compared by country in light of the coronavirus
-                            (COVID-19).
-                        </p>
-                    </a>
-                    <p>JP Hwang in towards data science</p>
+                            <h2 class="font-weight-bolder">What do various counreies´healthcare capacities look like ?</h2>
+                            <p>A daily covi-19 update from andy Slavitt, former head og the centers for medicare and medicaid sercices</p>
+                            <p>Healthcare data and metrics visualised and compared by country in light of the coronavirus (COVID-19).
+                            </p>
+                    
+                        <p>JP Hwang in towards data science</p>
+                     </button>   
                 </div>
 
 
 
                 <div class="row d-md-block bg-white col-12 col-md-4 col-6 col-md-4">
-                    <div class=>
-                        <img src="img/parkandwoman.jpeg" style="width: 35%;" class="img-1 img-ts rounded float-left"
-                            alt="...">
-                        <a href="#" class="text-decoration-none">
-                            <h2 class="font-weight-bolder">the top three coronavirus priorities for the next month</h2>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <p>Andy Slavitt</p>
-                        </a>
-                    </div>
-                    <div class="p-t-5">
-                        <img src="img/virus.jpeg" style="width: 35%;" class=" img-1 img-ts rounded float-left"
-                            alt="...">
-                        <a href="#" class="text-decoration-none">
-                            <h2 class="font-weight-bolder">i gave birth during the coronavirus pandemic. this is what
-                                happened</h2>
-                            <p>Tara Haelle in GRN</p>
-                        </a>
-                    </div>
+                    <button type="button" class="btn " data-toggle="modal" data-target="#content">
+                        <div>
+                            <img src="img/parkandwoman.jpeg" style="width: 35%;" class="img-1 img-ts rounded float-left" alt="...">
+                                <h2 class="font-weight-bolder">the top three coronavirus priorities for the next month</h2>
+                                <p>Andy Slavitt</p>
+                        </div>
+                    </button>
 
-                    <div>
-                        <img src="img/woman-home.jpeg" style="width: 35%;" class=" img-1 img-ts rounded float-left"
-                            alt="...">
-                        <a href="" class="text-decoration-none">
-                            <h2 class="font-weight-bolder">nobody Has a clue how many people have covid-19
-                            </h2>
-                            <p>Robert Roy Britt</p>
-                        </a>
-                    </div>
+                    <button type="button" class="btn " data-toggle="modal" data-target="#content">
+                        <div class="p-t-5">
+                            <img src="img/virus.jpeg" style="width: 35%;" class=" img-1 img-ts rounded float-left" alt="...">
+                                <h2 class="font-weight-bolder">i gave birth during the coronavirus pandemic. this is what happened</h2>
+                                <p>Tara Haelle in GRN</p>
+                        </div>
+
+                    </button>
+
+                    <button type="button" class="btn " data-toggle="modal" data-target="#content">
+                        <div>
+                            <img src="img/woman-home.jpeg" style="width: 35%;" class=" img-1 img-ts rounded float-left" alt="...">
+                                <h2 class="font-weight-bolder">nobody Has a clue how many people have covid-19
+                                </h2>
+                                <p>Robert Roy Britt</p>
+                        </div>
+                    </button>
+
+
+                    
 
                 </div>
-
-
-
-                <div class="d-none d-md-block bg-white col-6 col-md-4 col-6 .col-md-4">
-                    <img src="img/woman-home.jpeg" style="width: 100%;" class="img-ts rounded float-left" alt="...">
-                    <a href="#" class="text-decoration-none">
-                        <h2 class="font-weight-bolder">towards a bra-free instagram experience</h2>
-                    </a>
-                    <a href="" class="text-decoration-none">
-                        <p>hey intragram, i was just wondering</p>
-                    </a>
-                </div>
+                <button type="button" class="btn " data-toggle="modal" data-target="#content">
+                    <div class="d-none d-md-block bg-white col-6 col-md-4 col-6 .col-md-4">
+                        <img src="img/woman-home.jpeg" style="width: 100%;" alt="...">
+                            <h2 class="font-weight-bolder">towards a bra-free instagram experience</h2>
+                            <p>hey intragram, i was just wondering</p>
+                    </div>
+                </button>
+           
+                
 
 
             </div>
@@ -267,32 +246,115 @@
     <!------------------------------------------------ POST and ASIDE -------------------------------------------------------->
 
 
-    <div class="container">
-
-        <div class="row justify-content-between pad-mar">
-
-            <div class="col-8 infini" id="recent-post">
-            </div>
-
-            <div class="col-4 col-6 col-md-4 bg-white pad-mar-2" id="bar">
-
-                <h3 class="border-1">Popular on Medium</h3>
-                <div class="row" id="popular-post">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-
-
-
-
     <!------------------------------------------------ POST and ASIDE -------------------------------------------------------->
 
 
+    <div class="container">
+
+        <div class="row">
+
+                <div class="col-12 col-md-8 bg-white popular-posts" id="recent-post">
+ <!--NEW ENTRY-->
+                  
+                       <!--MODAL CONTENT-->
+
+                    <div class="modal fade" id="content" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="imagen">
+                                        <img src="img/blog.jpeg" alt="blog">
+                            
+                                    </div>
+                                    <div class="titulo">
+                                        <h2>Nobody Has a Clue How Many People Have COVID-19</h2>
+                                    </div>
+                                    <div class="subtitulo">
+                                        <h3>Local data simply isn’t available, while state and national totals woefully underreport the reality</h3>
+                                    </div>
+                                    <div class="row author">
+                                        <div class="col-12 col-lg-6 ">
+                                            <div class="img-aut">
+                                                <img src="img/autor.jpeg" alt="author">
+                                            </div>
+                                            <p>
+                                                Robert Roy Britt 
+                                                <br> Mar 27
+                                            </p>
+                                            
+                                        </div>
+                                        <div class="col-12 col-lg-6 social">
+                                            <a href="#"><i class="fab fa-twitter"></i></a> 
+                                            <a href="#"><i class="fab fa-linkedin"></i></a> 
+                                            <a href="#"><i class="fab fa-facebook-square"></i></a> 
+                                        </div>
+                            
+                                    </div>
+                            
+                                    <article class="blog">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ut consequuntur, nostrum similique ducimus eveniet minima illum, autem, nisi saepe molestias in magni molestiae fugiat aut modi ipsum eum. Labore.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis provident aperiam vero ipsam maxime eius laboriosam? Consectetur porro saepe minus neque maxime suscipit, autem placeat, dolorum accusantium recusandae quaerat!</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quis, consequatur blanditiis, aut nesciunt dolorem quo commodi laborum laudantium harum sint, incidunt sit recusandae unde sequi numquam doloribus voluptate necessitatibus.</p>
+                                    </article>
+                            
+                                    <div class="bottom-aut ">
+                                        <div class="img-bottom">
+                                            <img src="img/autor.jpeg" alt="author">      
+                                        </div>
+                                            <p class="text-uppercase"> written by </p>
+                                            <p> <b>Robert Roy Britt</b> </p>
+                                            <p>"Explainer of things, former editor-in-chief of Live Science and Space .com, author of the science thriller “5 Days to Landfall.”</p> 
+                                    </div>
+                            
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+
+                </div>
+
+
+
+                <div class= "d-none d-md-block col-4" id="bar" >
+
+                    
+                        <div class="bg-white infini float-right">
+                            
+                                
+                                    <h3 class="border-1">Popular on Medium</h3>
+                                    <div id="popular-post">
+
+                                     </div>
+                         
+                            
+
+                        </div>
+                   
+
+                </div>
+           
+
+        </div>
+
+
+
+
+
+        <!------------------------------------------------ POST and ASIDE -------------------------------------------------------->
 
 
 
@@ -304,20 +366,14 @@
 
 
 
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js "
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous ">
+        <script src="js/main.js ">
         </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous ">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous ">
         </script>
-    <script src="./js/main.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous ">
+        </script>
+        <script src="js/main.js "></script>
 </body>
 
 </html>

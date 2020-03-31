@@ -51,7 +51,6 @@ h4 {
 
 img {
     max-width: 100%;
-    min-width: 94px;
 }
 
 
@@ -67,11 +66,10 @@ input {
 }
 
 input[type=search] {
-	-webkit-appearance: textfield;
+    -webkit-appearance: textfield;
     -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-	font-family: inherit;
-	font-size: 50%;
+    font-family: inherit;
+    font-size: 50%;
 }
 
 input::-webkit-search-decoration,
@@ -223,8 +221,9 @@ p {
 .bar-fixed {
     position: fixed;
     width: 500px;
+    padding-right: 118px;
     top: 0;
-    right: 0px;
+    right: 50px;
 }
 
 /**container**/
@@ -336,8 +335,8 @@ footer .links a {
 }
 
 .extract{
-    display:block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width:450px;
+    overflow:hidden;
+    height:100px;
+    line-height:50px;  
 }
