@@ -31,7 +31,6 @@ function fetchPosts() {
         url: "https://javascript-ajax-d0ce6.firebaseio.com/team-xmm/posts/.json",
         method: "GET",
         success: (response) => {
-            console.log('RES from GET', response)
             printPost(response)
 
         }
@@ -55,8 +54,10 @@ function printPost(object) {
         let newContent = `  <div class="row">
         <div class="col-9">
             <small class="text-uppercase">${postTopic}</small>
+            <a href="#">
             <h3>${postTitle}</h3>
             <small class="extract">${postDescription}</small>
+            </a>
             <p>${postAuthor}</p>
             <small>${postDate}</small>
         </div>
@@ -77,8 +78,7 @@ function getPostInfo() {
     let postAuthor = $("#author").val()
     let postDate = $("#date").val()
     let postImgUrl = $("#select-image").val()
-    let popularPost = $("#popular-box").val()
-    console.log(postTopic, postTitle, postDescription, postAuthor, postDate, postImgUrl, popularPost)
+    let popularPost = $("#popular-box").is(":checked")
     return {
         topic: postTopic,
         title: postTitle,
@@ -98,7 +98,6 @@ function addButtonPostListener() {
             method: "POST",
             data: JSON.stringify(postInfo),
             success: (response) => {
-                console.log('RES from POST:', response)
                 fetchPosts()
             }
         })
@@ -175,16 +174,17 @@ addSearchListener()
 
 function filterByPopularity() {
     let popularPost = postArray.filter((post) => {
-        console.log(post.is_popular)
         return post.is_popular
     })
+    let topFive = popularPost.slice(0, 5)
     $("#popular-post").empty()
-    popularPost.forEach((post) => {
+    topFive.forEach((post, index) => {
         let postTitle = post.title
         let postAuthor = post.author
         let postDate = post.date
         let currentContent = $("#popular-post").html()
-        let newContent = ` <article class="bg-white ">
+        let newContent = ` <div class="col-3"> <h1 class="text-muted">0${index + 1}</h1></div>
+        <article class=" col-9 bg-white ">
         <a href="">
             <h2 class="font-weight-bolder">${postTitle}</h2>
         </a>

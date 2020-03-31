@@ -222,9 +222,8 @@ p {
 .bar-fixed {
     position: fixed;
     width: 500px;
-    padding-right: 118px;
     top: 0;
-    right: 50px;
+    right: 0px;
 }
 
 /**container**/
@@ -336,6 +335,7 @@ footer .links a {
 }
 
 .extract{
+    display:block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
