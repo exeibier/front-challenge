@@ -58,7 +58,7 @@ function printPost(object) {
             <button type="button" class="btn text-left" data-toggle="modal" data-target="#content">
                     <small class="text-uppercase">${postTopic}</small>
                     <h2 class="font-weight-bolder pa-ma  col-8 align-self-left">${postTitle} </h2>
-                    <p class="text-secondary extract">${postDescription}</p>
+                    <p class="text-secondarygit  extract">${postDescription}</p>
                     <p>${postAuthor}</p>
                     <p class="text-secondary">${postDate}</p>
             </button>
