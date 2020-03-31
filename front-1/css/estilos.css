@@ -51,6 +51,7 @@ h4 {
 
 img {
     max-width: 100%;
+    min-width: 94px;
 }
 
 
@@ -66,10 +67,11 @@ input {
 }
 
 input[type=search] {
-    -webkit-appearance: textfield;
+	-webkit-appearance: textfield;
     -webkit-box-sizing: content-box;
-    font-family: inherit;
-    font-size: 50%;
+    box-sizing: content-box;
+	font-family: inherit;
+	font-size: 50%;
 }
 
 input::-webkit-search-decoration,
@@ -221,9 +223,8 @@ p {
 .bar-fixed {
     position: fixed;
     width: 500px;
-    padding-right: 118px;
     top: 0;
-    right: 50px;
+    right: 0px;
 }
 
 /**container**/
@@ -332,4 +333,11 @@ footer .links {
 footer .links a {
     color: rgba(255, 255, 255, 0.7);
     margin-left: 10px;
+}
+
+.extract{
+    display:block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
