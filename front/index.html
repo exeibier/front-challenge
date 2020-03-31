@@ -35,48 +35,62 @@
                     <input type="search" placeholder="Search in Medium">
                 </form>
 
-                <button type="button" class="btn btn-outline-secondary p-2 bd-highlight" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-outline-secondary p-2 bd-highlight" data-toggle="modal"
+                    data-target="#exampleModal">
                     New Post
-                  </button>
-                  <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Post</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Nuevo Post</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Select image</label>
+                                        <input type="text" class="form-control" id="select-image"
+                                            aria-describedby="image" placeholder="Paste url">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Title</label>
+                                        <input type="text" class="form-control" id="title" aria-describedby="Title"
+                                            placeholder="Title">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Topic</label>
+                                        <input type="text" class="form-control" id="topic" aria-describedby="Title"
+                                            placeholder="topic">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">author</label>
+                                        <input type="text" class="form-control" id="author" aria-describedby="author"
+                                            placeholder="author">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Date</label>
+                                        <input type="text" class="form-control" id="date" placeholder="Date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Text</label>
+                                        <textarea class="form-control rounded-0" id="text-area" rows="10"></textarea>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="popular-box">
+                                        <label class="form-check-label" for="exampleCheck1">Popular</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary btn-post">Post</button>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Select image</label>
-                                    <input type="text" class="form-control" id="select-image" aria-describedby="image" placeholder="Paste url">
-                                  </div>
-                                <div class="form-group">
-                                  <label for="exampleInputEmail1">Title</label>
-                                  <input type="text" class="form-control" id="title" aria-describedby="Title" placeholder="Title">
-                                </div>
-                                <div class="form-group">
-                                  <label for="exampleInputPassword1">Date</label>
-                                  <input type="text" class="form-control" id="date" placeholder="Date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Text</label>
-                                    <textarea class="form-control rounded-0" id="text-area" rows="20"></textarea>
-                                  </div>
-                                  <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="popular-box">
-                                    <label class="form-check-label" for="exampleCheck1">Popular</label>
-                                  </div>
-                              </form>     
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Post</button>
-                        </div>
-                    </div>
                     </div>
                 </div>
 
@@ -257,8 +271,20 @@
 
         <div class="row justify-content-between pad-mar">
 
-            <div class="col-8 bg-info infini">
-                SCROLL INFINITY
+            <div class="col-8 bg-info infini" id="recent-post">
+                <div class="row">
+                    <div class="col-9">
+                        <small class="text-uppercase"> topic in uppercase </small>
+                        <h3> title</h3>
+                        <small>description</small>
+                        <p>author con un tamaño mas pequeño que el small pero en negro</p>
+                        <small>fecha</small>
+                    </div>
+                    <div class="col-3 d-flex align-items-center"><img
+                            src="https://www.ecestaticos.com/image/clipping/de51324714e8a3f4bdf86ffcac013008/coronavirus-covid-19-sintomas-como-prevenir-su-contagio-y-a-que-telefono-llamar.jpg"
+                            alt="no img"></div>
+
+                </div>
             </div>
 
             <div class="col-4 col-6 col-md-4 bg-white pad-mar-2">
@@ -334,7 +360,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous ">
         </script>
-    <script src="js/main.js "></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
