@@ -68,6 +68,7 @@ input {
 input[type=search] {
     -webkit-appearance: textfield;
     -webkit-box-sizing: content-box;
+    box-sizing: content-box;
     font-family: inherit;
     font-size: 50%;
 }
@@ -221,9 +222,9 @@ p {
 .bar-fixed {
     position: fixed;
     width: 500px;
-    padding-right: 118px;
+    /* padding-right: 0; */
     top: 0;
-    right: 50px;
+    right: 30px;
 }
 
 /**container**/
@@ -335,8 +336,9 @@ footer .links a {
 }
 
 .extract{
+    display: block;
     width:450px;
     overflow:hidden;
-    height:100px;
-    line-height:50px;  
+    height:50px;
+    line-height:50px; 
 }
