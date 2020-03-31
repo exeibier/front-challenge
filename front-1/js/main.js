@@ -68,6 +68,7 @@ function printPost(object) {
         `
         $("#recent-post").html(currentContent + newContent)
     }
+    filterByPopularity()
 }
 function getPostInfo() {
     let postTopic = $("#topic").val()
@@ -84,7 +85,8 @@ function getPostInfo() {
         description: postDescription,
         author: postAuthor,
         date: postDate,
-        url_image: postImgUrl
+        url_image: postImgUrl,
+        is_popular: popularPost
     }
 }
 function addButtonPostListener() {
@@ -163,9 +165,34 @@ function filterPosts() {
 }
 function addSearchListener() {
     $("#search").keypress((event) => {
+        event.preventDefault()
         if (event.which === 13) {
             filterPosts()
         }
     })
 }
 addSearchListener()
+
+function filterByPopularity() {
+    let popularPost = postArray.filter((post) => {
+        console.log(post.is_popular)
+        return post.is_popular
+    })
+    $("#popular-post").empty()
+    popularPost.forEach((post) => {
+        let postTitle = post.title
+        let postAuthor = post.author
+        let postDate = post.date
+        let currentContent = $("#popular-post").html()
+        let newContent = ` <article class="bg-white ">
+        <a href="">
+            <h2 class="font-weight-bolder">${postTitle}</h2>
+        </a>
+        <p>${postAuthor}</p>
+        <small>${postDate}</small>
+    </article>
+        `
+        $("#popular-post").html(currentContent + newContent)
+
+    })
+}
