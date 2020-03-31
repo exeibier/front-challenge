@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
       if (scrollTop < 600) {
         bar.className = 'd-none d-md-block col-4 ';
       }
-      if (scrollTop > 650) {
+      if (scrollTop > 600) {
         bar.className = 'd-none d-md-block col-4 bar-fixed';
       }
     });
