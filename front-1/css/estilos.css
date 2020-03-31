@@ -218,6 +218,13 @@ p {
 .popular-posts .pop-img {
     padding-top: 30px;
 }
+.bar-fixed {
+    position: fixed;
+    width: 500px;
+    padding-right: 118px;
+    top: 0;
+    right: 50px;
+}
 
 /**container**/
 
