@@ -172,8 +172,8 @@ a {
 }
 
 .img-1 {
-    margin-right: 15px;
-    height: 100px;
+    margin-right: 17px;
+    height: 129px;
 }
 
 .menu-fixed {
@@ -219,6 +219,7 @@ p {
 .popular-posts .pop-img {
     padding-top: 30px;
 }
+
 .bar-fixed {
     position: fixed;
     width: 500px;
@@ -226,6 +227,7 @@ p {
     top: 0;
     right: 30px;
 }
+
 
 /**container**/
 
@@ -335,10 +337,26 @@ footer .links a {
     margin-left: 10px;
 }
 
-.extract{
+.extract {
     display: block;
-    width:450px;
-    overflow:hidden;
-    height:50px;
-    line-height:50px; 
+    width: 450px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+}
+
+p {
+    text-align: left;
+}
+
+.font-weight-bolder {
+    font-size: 16px;
+    text-align: left;
+    font-family: Helvetica;
+    line-height: 24px;
+    letter-spacing: -.17px !important;
+}
+
+.incon-person {
+    font-size: 14px;
 }
