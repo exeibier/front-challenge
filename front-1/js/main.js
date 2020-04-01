@@ -167,6 +167,7 @@ function filterPosts() {
     addReadPostBtn()
 }
 function addSearchListener() {
+    console.log($("#search"))
     $("#search").keypress((event) => {
         if (event.which === 13) {
             event.preventDefault()
