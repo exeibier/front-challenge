@@ -91,7 +91,7 @@ function getPostInfo() {
     }
 }
 function addButtonPostListener() {
-    let postButton = $(".btn-post")
+    let postButton = $("#btn-new-post")
     postButton.click((event) => {
         let postInfo = getPostInfo()
         $.ajax({
@@ -100,6 +100,7 @@ function addButtonPostListener() {
             data: JSON.stringify(postInfo),
             success: (response) => {
                 fetchPosts()
+                $("#exampleModal").modal("hide")
             }
         })
 
