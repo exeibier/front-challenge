@@ -55,7 +55,7 @@ function printPost(object) {
         let newContent = ` 
       <div class="row border-bottom m-top-2">
         <div class="col-8  ">
-            <button type="button" class="btn text-left" data-toggle="modal" data-target="#content">
+            <button type="button" class="btn text-left btn-post" data-post-title="${post.title}" data-post-author="${post.author}" data-post-date="${post.date}" data-post-description="${post.description}" data-post-topic="${post.topic}" data-post-image="${post.url_image}">
                     <small class="text-uppercase">${postTopic}</small>
                     <h2 class="font-weight-bolder pa-ma  col-8 align-self-left">${postTitle} </h2>
                     <p class="text-secondarygit  extract">${postDescription}</p>
@@ -116,16 +116,12 @@ function filterPosts() {
         let title = post.title.toLowerCase()
         let description = post.description.toLowerCase()
         if (topic.includes(criterialSearch)) {
-            console.log('funciona 1')
             return true
         } else if (title.includes(criterialSearch)) {
-            console.log('funciona 2')
             return true
         } else if (description.includes(criterialSearch)) {
-            console.log('funciona 3')
             return true
         } else {
-            console.log('NO funciona')
             return false
         }
     })
@@ -142,7 +138,6 @@ function filterPosts() {
     }
 
     filteredPosts.forEach((post) => {
-        console.log(post)
         let postTopic = post.topic
         let postTitle = post.title
         let postDescription = post.description
@@ -153,11 +148,13 @@ function filterPosts() {
         let newContent = `
         <div class="row">
             <div class="col-9">
+            <button type="button" class="btn text-left btn-post" data-post-title="${post.title}" data-post-author="${post.author}" data-post-date="${post.date}" data-post-description="${post.description}" data-post-topic="${post.topic}" data-post-image="${post.url_image}">
                 <small class="text-uppercase">${postTopic}</small>
                 <h3>${postTitle}</h3>
                 <small class="extract">${postDescription}</small>
                 <p>${postAuthor}</p>
                 <small>${postDate}</small>
+                </button>
             </div>
             <div class="col-3 d-flex align-items-center">
                 <img src="${postImgUrl}" alt="">
@@ -167,6 +164,7 @@ function filterPosts() {
         $("#top").html(currentContent + newContent)
 
     })
+    addReadPostBtn()
 }
 function addSearchListener() {
     $("#search").keypress((event) => {
@@ -195,7 +193,7 @@ function filterByPopularity() {
             <h1 class="text-muted">0${index + 1}</h1>
         </div>
         <div class="col-8">
-        <button type="button" class="btn text-left" data-toggle="modal" data-target="#content">
+        <button type="button" class="btn text-left btn-post" data-post-title="${post.title}" data-post-author="${post.author}" data-post-date="${post.date}" data-post-description="${post.description}" data-post-topic="${post.topic}" data-post-image="${post.url_image}">
             <article class="bg-white ">
                 <h2 class="font-weight-bolder">${postTitle}</h2>
                 <p>${postAuthor}</p>
@@ -203,96 +201,32 @@ function filterByPopularity() {
             </article>          
         </button>
         </div>
-        </div
+        </div>
         `
         $("#popular-post").html(currentContent + newContent)
 
     })
+    addReadPostBtn()
 }
 
-function blogEntry() {
-    let hash
-    for (hash in object) {
-        let post = object[hash]
-        postArray.push(post)
-        let postTitle = post.title
-        let postDescription = post.description
-        let postAuthor = post.author
-        let postDate = post.date
-        let postImgUrl = post.url_image
-        let newContent = ` 
-      <div class="modal fade" id="content" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Entry</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-              <div class="container">
-                  <div class="imagen">
-                      <img src=${postImgUrl} alt="blog">
-          
-                  </div>
-                  <div class="titulo">
-                      <h2>${postTitle}</h2>
-                  </div>
-      
-                  <div class="row author">
-                      <div class="col-12 col-lg-6 ">
-                          <div class="img-aut">
-                              <img src="img/autor.jpeg" alt="author">
-                          </div>
-                          <p>
-                              ${postAuthor}
-                              <br> ${postDate}
-                          </p>
-                          
-                      </div>
-                      <div class="col-12 col-lg-6 social">
-                          <a href="#"><i class="fab fa-twitter"></i></a> 
-                          <a href="#"><i class="fab fa-linkedin"></i></a> 
-                          <a href="#"><i class="fab fa-facebook-square"></i></a> 
-                      </div>
-          
-                  </div>
-          
-                  <article class="blog">
-                      ${postDescription}
-                  </article>
-          
-                  <div class="bottom-aut ">
-                      <div class="img-bottom">
-                          <img src="img/autor.jpeg" alt="author">      
-                      </div>
-                          <p class="text-uppercase"> written by </p>
-                          <p> <b>${postAuthor}</b> </p>
-                          <p>"Explainer of things, former editor-in-chief of Live Science and Space .com, author of the science thriller “5 Days to Landfall.”</p> 
-                  </div>
-          
-                  
-                  
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-      `
-        newContent = addModalListener()
-    }
-    filterByPopularity()
-}
 
-function addModalListener() {
-    $(document).ready(function () {
-        $("#recent-post").click(function () {
-            $("#content").modal();
-        });
-    });
-}
+function addReadPostBtn() {
+    $(".btn-post").click(function (event) {
+        let post = $(this).data()
+        let title = post.postTitle
+        let date = post.postDate
+        let author = post.postAuthor
+        let description = post.postDescription
+        let topic = post.postTopic
+        let image = post.postImage
 
+        $("#title-read-post").text(title)
+        $("#date-author-read-post").text(`${author} ${date}`)
+        $("#description-read-post").text(description)
+        $("#topic-read-post").text(topic)
+        console.log(topic)
+        $("#img-read-post").attr("src", image)
+
+        $("#read-post").modal("show")
+    })
+}
