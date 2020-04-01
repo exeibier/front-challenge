@@ -113,9 +113,9 @@ addButtonPostListener()
 function filterPosts() {
     let criterialSearch = $("#search").val().toLowerCase()//obtener lo que tengo en mi buscardor
     let filteredPosts = postArray.filter((post) => {
-        let topic = post.topic.toLowerCase()
-        let title = post.title.toLowerCase()
-        let description = post.description.toLowerCase()
+        let topic = post.topic ? post.topic.toLowerCase() : ""
+        let title = post.title ? post.title.toLowerCase() : ""
+        let description = post.description ? post.description.toLowerCase() : ""
         if (topic.includes(criterialSearch)) {
             return true
         } else if (title.includes(criterialSearch)) {
@@ -168,7 +168,6 @@ function filterPosts() {
     addReadPostBtn()
 }
 function addSearchListener() {
-    console.log($("#search"))
     $("#search").keypress((event) => {
         if (event.which === 13) {
             event.preventDefault()
